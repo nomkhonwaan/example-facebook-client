@@ -17,7 +17,7 @@ const (
 // Client is an interface for doing things with Facebook Graph APIs
 type Client interface {
 	// Authenticate used to get an access token from Facebook
-	Authenticate(appID, appSecret, redirectURI string) http.HandlerFunc
+	Authenticate(appID, appSecret, redirectURI, onLoggedInRedirectURI string) http.HandlerFunc
 	// Me returns basic user details
 	Me() (map[string]interface{}, error)
 }
